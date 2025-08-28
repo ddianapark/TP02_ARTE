@@ -4,17 +4,24 @@
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
 }
 
+header
+{
+  position: sticky;
+  width: 100%;
+  top: 0;
+}
+
 /*HEADER*/
 header nav {
   display:flex;
-  position: relative;
-  background-color: #ABDB9A;
+  background-color: #baeea7;
   text-align: center;
   width: 100%;
+  
 }
 
 header nav ul{
-  background-color: #ABDB9A;
+  background-color: #baeea7;
   display: flex;
   align-items: center;
   flex-wrap: wrap;
@@ -24,7 +31,7 @@ header nav ul{
 
 header nav ul li{
   list-style: none;
-  margin: 2%;
+  margin: 1%;
   padding: 0.5%;
   float: left;
   background-color: #2C3E50;
@@ -32,67 +39,62 @@ header nav ul li{
   text-align: center;
   font-weight: bold;
   list-style-type: none;
-
 }
 
 header nav ul li a{
   text-decoration: none;
   list-style-type: none;
-  color: #ABDB9A;
-  font-size: 15px;
+  color: #baeea7;
+  font-size: 13px;
   transition: all 0.5s ease; /*TRANSICIÓN para cuando pone el mouse arriba */
 }
 
 header nav ul li a:hover{
   box-shadow: 0px 0px 10px black;
   color: #2C3E50;
-  background-color: #ABDB9A;
-  font-size: 18px;
+  background-color: #baeea7;
+  font-size: 14px;
 }
 
-header h1{
-  text-align: center;
-  font-size: 10ex;
-  margin-left: 1%;
-  margin-right: 1%;
-  margin-top: 1%;
-  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-  color: black
+header img{
+  width: 5%;
+  height: auto;
+  margin-left: 1.5%;
+}
+
+.logo {
+  display: flex;
 }
 
 header h3{
-  text-align: center;
   font-size: 3ex;
   padding: 0.5%;
   margin-left: 1%;
   margin-right: 1%;
   margin-bottom: 1%;
+  margin-top: 1.9%;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   font-style: italic; 
 }
 
 header h4{
   text-align: center;
-  font-size: 2ex;
+  font-size: 20px;
   font-style: italic;
-  padding: 1%;
   font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   color: black
 }
 
 header div {
-  background-color: #ABDB9A;
-  border-bottom: 4px solid black;
-  border-top: 4px solid black;
+  background-color: #baeea7;
+  border-bottom: 2px solid black;
+  border-top: 2px solid black;
 }
 
 /*BODY*/
 body {
-  background-color: #f6fff8; 
+  background-color: #d3f7db; 
   color: #2c3e50;
-  line-height: 1.6;
-  padding: 0;
-  margin: 0;
 }
 
 main {
@@ -103,13 +105,14 @@ main {
 }
 
 h2{
-  color: #52b788;
+  color: #2f4963;
   text-shadow: 1px 1px 1px #abdb9a8f;
 }
 
 h3 {
   color: #2c3e50;
   margin-bottom: 0.5rem;
+
 }
 
 p {
@@ -118,6 +121,24 @@ p {
 }
 
   /*INDEX*/
+
+  .display img{
+    width: 50%;
+    height: auto;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px #2C3E50 ;
+  }
+
+  .display{ 
+    display: flex;
+    width: 100%;
+  }
+
+  .display h2{
+    width: 60%;
+    padding: 2%;
+  }
+
   .beneficios {
     width: 100%;
     display: grid;
@@ -178,14 +199,14 @@ p {
 }
 
 .div2 h3, .div3 h3{
-  background-color: #74c69d;
+  background-color: #c0f0d8;
   box-shadow: 1px 3px 3px #2c3e50;
   padding: 0.5%;
   border-radius: 5px;
 }
 
 .div2 h2, .div3 h2{
-  background-color: #ABDB9A;
+  background-color: #a3e0c2;
   box-shadow: 1px 3px 3px #2c3e50;
   padding: 0.5%;
   border-radius: 5px;
@@ -202,15 +223,41 @@ p {
 }
 
 /*TUTORIAL*/
+
+
 .pasos {
   width: 100%;
   display: grid;
-  grid: "paso1 paso2" 0.8fr "paso3 paso4" 0.8fr / 1fr 1fr;
+  grid-template-rows: 0.8fr;
+  grid-template-columns: repeat(4, 1fr);
   gap: 8px;
+}
+
+.pasos div{
+  background: #ffffff;
+  border: 1px solid #d3e4cd;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.pasos h2{
+  margin-bottom: 2%;
 }
 
 .pasos li{
   list-style: none;
+  padding: 1rem;
+  margin-bottom: 2%;
+  border-left: 4px solid #74c69d;
+  background: #ecfff1;
+  border-radius: 6px;
+}
+
+.pasos img{
+  width: 100%;
+  height: auto;
+  align-self: center;
 }
 
 .paso1 { grid-area: paso1; }
@@ -220,8 +267,9 @@ p {
 
 
 video{
-  width: 40%;
+  width: 80%;
   height: auto;
+  align-self: center;
 }
 
 .paso1 h2, .paso2 h2, .paso3 h2, .paso4 h2
@@ -241,6 +289,7 @@ video{
   border-radius: 5px;
 }
 
+
 /*TIPOS*/
 .tipos {
   width: 100%;
@@ -250,8 +299,29 @@ video{
   gap: 8px;
 }
 
+.tipos img{
+  width: 100%;
+  height: auto;
+  align-self: center;
+}
 
-.tipos div {
+.info{
+  width: 100%;
+  display: grid;
+  grid-template-rows: 0.7fr;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+}
+
+.tipos h2, .info h2, .boxTipos h2{
+  text-align: center;
+}
+
+.tipos h3, .info h3, .boxTipos h3{
+  font-weight: 500;
+}
+
+.tipos div, .info div {
   background: #ffffff;
   border: 1px solid #cce3d6;
   padding: 1rem;
@@ -272,7 +342,7 @@ video{
 
 }
 
-.tipoCompra ul, .infoCompra ul, .tipos ul{
+.tipoCompra ul, .infoCompra ul, .tipos ul, .info ul{
   list-style-type: none;
 }
 
@@ -300,9 +370,17 @@ video{
   gap: 8px;
 }
 
+.infoCompra h2{
+  text-align: center;
+}
+
+.tipoCompra div{
+  background-color: #a3e0c2;
+  box-shadow: 1px 3px 10px #2c3e50;
+}
+
 .infoCompra {
   width: 100%;
-
   display: grid;
   grid-template-rows: repeat(3, 1fr);
   grid-template-columns: repeat(2, 1fr);
